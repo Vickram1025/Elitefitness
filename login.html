@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="container">
+    <div class="loginbox">
+        <form id="login" class="input-group">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username" class="input" required>
+            <input type="password" id="loginPassword" placeholder="Password" class="input" required>
+            <button type="button" class="btn" onclick="handleLogin()">Login</button>
+            <p class="msg">Don't have an account? <span onclick="toggleForm()">Register</span></p>
+        </form>
+
+        <form id="register" class="input-group" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="registerUsername" placeholder="Username" class="input" required>
+            <input type="email" id="registerEmail" placeholder="Email" class="input" required>
+            <input type="password" id="registerPassword" placeholder="Password" class="input" required>
+            <button type="button" class="btn" onclick="handleRegister()">Register</button>
+            <p class="msg">Already have an account? <span onclick="toggleForm()">Login</span></p>
+        </form>
+
+        <div id="logout" style="display: none;">
+            <h2>Welcome, <span id="userDisplay"></span></h2>
+            <button type="button" class="btn" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const targetUrl = "http://127.0.0.1:5501/Homepage.html"; 
+
+   
+    function toggleForm() {
+        const login = document.getElementById('login');
+        const register = document.getElementById('register');
+        login.style.display = login.style.display === 'none' ? 'flex' : 'none';
+        register.style.display = register.style.display === 'none' ? 'flex' : 'none';
+    }
+
+    
+    function handleRegister() {
+        const username = document.getElementById('registerUsername').value;
+        const email = document.getElementById('registerEmail').value;
+        const password = document.getElementById('registerPassword').value;
+
+        if (username && email && password) {
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            alert('Registration successful! Please login.');
+            toggleForm();
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+
+   
+    function handleLogin() {
+        const username = document.getElementById('loginUsername').value;
+        const password = document.getElementById('loginPassword').value;
+
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (username === storedUsername && password === storedPassword) {
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('loggedInUser', username);
+            alert('Login successful!');
+            window.location.href = targetUrl; 
+        } else {
+            alert('Invalid username or password.');
+        }
+    }
+
+
+   
+
+</script>
+</body>
+</html>

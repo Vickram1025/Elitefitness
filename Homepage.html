@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE FITNESS</title>
+    <link rel="icon" href="./image/logotop.png">
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+    <div id="navo">
+        <img src="./image/title.png" alt="Elite Fitness Logo">
+        <a href="#join">Get Fit Today</a>
+    </div>
+    <div class="header">
+        <div class="logo">
+            <img src="./image/logo.png" alt="Elite Fitness">
+        </div>
+        <nav class="navigation">
+            <a href="Homepage.html">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#programs">Programs</a>
+            <a href="#contact">Contact</a>
+            <a href="login.html" id="btnlogin-popup">Login</a>
+        </nav>
+    </div>
+    <div id="land">
+        <h1>"Unlock your potential:<br>
+            build strength, resilience, <br>& confidence through <br>fitness"
+        </h1>
+    </div>
+    <div class="container">
+        <div class="image">
+            <img src="./image/welcome.png" alt="Welcome to Elite Fitness">
+        </div>
+        <div class="content">
+            <h1>Welcome to <span style="color: green;"><b>ELITE FITNESS</b></span></h1>
+            <p>Where fitness meets lifestyle. We’re not just a gym; we’re a complete fitness experience designed to transform your life. Recognized as a premier fitness destination in Egmore, Elite Fitness Studio brings top training programs to you.</p>
+            <p>Our tailored programs support your journey to peak health, offering services like functional training, strength and conditioning, weight loss, weight gain, and body transformation.</p>
+            <p>Guided by highly qualified trainers, we ensure every client receives personal attention and customized solutions. Choose Elite Fitness Studio – your top choice for fitness transformation in Egmore.</p>
+        </div>
+    </div>
+    <div id="function">
+        <div id="f1"><h1 style="font-size: 20px;">Functional Training</h1>
+            <button>More</button>
+        </div>
+        <div id="f2"><h1 style="font-size: 20px;">Fitness Bootcamp</h1>
+            <button>More</button>
+        </div>
+        <div id="f3"><h1 style="font-size: 20px;">Body Transformation</h1>
+            <button>More</button>
+        </div>
+        <div id="f4"><h1 style="font-size: 20px;">Weight Loss & Weight Gain</h1>
+            <button>More</button>
+        </div>
+    </div>
+    <div>
+        <h1>Our Gym Equipment</h1>
+        <div class="gallery">
+            <img src="./gym equipment/gym1.jpeg" alt="Gym Equipment 1">
+            <img src="./gym equipment/gym2.jpeg" alt="Gym Equipment 2">
+            <img src="./gym equipment/gym3.jpeg" alt="Gym Equipment 3">
+            <img src="./gym equipment/gym4.jpeg" alt="Gym Equipment 4">
+            <img src="./gym equipment/gym5.jpeg" alt="Gym Equipment 5">
+            <img src="./gym equipment/gym6.jpeg" alt="Gym Equipment 6">
+            <img src="./gym equipment/gym7.jpeg" alt="Gym Equipment 7">
+            <img src="./gym equipment/gym8.jpeg" alt="Gym Equipment 8">
+        </div>
+    </div>
+    <div id="bmi-calculator">
+        <h1 style="text-align: center; color: green;">BMI Calculator</h1>
+        <div id="bmi-box">
+            <form id="bmi-form">
+                <input type="number" id="weight" placeholder="Enter your weight (kg)" required><br>
+                <input type="number" id="height" placeholder="Enter your height (cm)" required><br>
+                <button type="submit">Calculate BMI</button>
+            </form>
+            <div id="bmi-result">
+                <h2>Your BMI: <span id="bmi-value">--</span></h2>
+                <p id="bmi-category"></p>
+            </div>
+        </div>
+    </div>
+    <div id="opportunities">
+        <h1 style="color:green; text-align: center;">Contact Us</h1>
+        <div id="box">
+            <form>
+                <input type="text" name="name" placeholder="Name*" required><br>
+                <input type="email" name="email" placeholder="Email*" required><br>
+                <label for="phone" style="color: white;">IN +91</label>
+                <input type="tel" name="phone" placeholder="Phone"><br>
+                <textarea name="message" placeholder="Detail Message"></textarea><br>
+                <button type="submit">Enquire</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h2 style="color: green;">Elite Fitness</h2>
+            <p>Helping you achieve your fitness goals!</p>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#classes">Programs</a>
+                <a href="#contact">Contact</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: EliteFitness@gmail.com</p>
+                <p>Phone: +123456789</p>
+                <p>Address: 143 Street, Egmore, Chennai</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <img src="./icon/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="./icon/instagram.png" alt="Instagram">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="./icon/twitter.png" alt="Twitter">
+                </a>
+            </div>
+            <p>Copyright 2024 Elite Fitness. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('bmi-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100;
+            if (!weight || !height) {
+                alert("Please enter valid inputs!");
+                return;
+            }
+            const bmi = (weight / (height * height)).toFixed(2);
+            document.getElementById('bmi-value').textContent = bmi;
+            let category = "";
+            if (bmi < 18.5) {
+                category = "Underweight";
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = "Normal weight";
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = "Overweight";
+            } else {
+                category = "Obesity";
+            }
+            document.getElementById('bmi-category').textContent = "Category: " + category;
+        });
+    </script>
+</body>
+</html>
