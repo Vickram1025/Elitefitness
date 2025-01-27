@@ -1,30 +1,26 @@
-
-*{
+* {
     margin: 0px;
     padding: 0px;
-   
 }
 
-#navo{
-
+#navo {
     height: 90px; 
     width: 100%;
-     background-color:green; 
-     box-shadow: inset 0px 2px 7px 5px black;
-     display: flex;
-     
+    background-color: green; 
+    box-shadow: inset 0px 2px 7px 5px black;
+    display: flex;
 }
-#navo img{
-    margin:5px 0px 0px 44%;
+
+#navo img {
+    margin: 5px 0px 0px 44%;
     height: 70px;
     width: 150px;
-    
-    
 }
+
 #navo a {
-    margin:27px 20px 0px 30%;
-   padding-left: 7px;
-   padding-top: 5px;
+    margin: 27px 20px 0px 30%;
+    padding-left: 7px;
+    padding-top: 5px;
     height: 30px;
     width: 130px;
     font-size: 23px;
@@ -32,52 +28,42 @@
     text-decoration: none;
     color: white;
     background-color: black;
-    &:hover{
-        color: black;
-        background-color: white;
-    }
 }
 
+#navo a:hover {
+    color: black;
+    background-color: white;
+}
 
-
-
-
-/*  */
-
-
+/* Header */
 .header {
     height: 50px;
-  display: flex;
-  gap: 340px;
-  background-color: black;
-  color: #fff;
-  width: 100%;
-  
+    display: flex;
+    gap: 340px;
+    background-color: black;
+    color: #fff;
+    width: 100%;
 }
-
 
 .logo img {
-  height: 40px;
-  margin-left: 30px;
-  filter: drop-shadow(1px 1px white);
-
+    height: 40px;
+    margin-left: 30px;
+    filter: drop-shadow(1px 1px white);
 }
-.navigation{
+
+.navigation {
     margin-top: 10px;
 }
 
-
 .navigation a {
-    
     position: relative;
     font-size: 20px;
     color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 70px;
-    
-    
 }
+
 .navigation a::after {
     content: "";
     position: absolute;
@@ -87,66 +73,65 @@
     bottom: -6px;
     background-color: green;
     border-radius: 5px;
-    transform: scalex(0);
+    transform: scaleX(0);
     transition: transform .5s;
     transform-origin: right;
 }
-.navigation a:hover::after{
-    transform-origin: left ;
-    transform: scalex(1);
 
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
-
-#btnlogin-popup{
+#btnlogin-popup {
     text-decoration: none;
     padding: 5px;    
-    background-color:black;
+    background-color: black;
     border: 1px solid white;
     border-radius: 6px;
     cursor: pointer;
     font-size: 20px;
     color: white;
-    margin: 9px 0px 0px 260px ;
-    &:hover{
-        background-color: green;
-        color: black;
-    }
+    margin: 9px 0px 0px 260px;
 }
 
+#btnlogin-popup:hover {
+    background-color: green;
+    color: black;
+}
 
-
+/* Body */
 body {
-  
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* landing img  */
-#land{
+/* Landing Section */
+#land {
     height: 700px;
     width: 100%;
     background-image: url(./image/land.jpeg);
-    background-size: 100% 700px;background-repeat: no-repeat;
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
 }
 
-#land h1{
+#land h1 {
     height: 500px;
     width: 300px;
     color: white; 
-    
-   font-size: 40px;
-     margin-top: 80px;
+    font-size: 40px;
+    margin-top: 80px;
     margin-left: 70%; 
-    transform: skewy(-20deg);
+    transform: skewY(-20deg);
     box-shadow: 0px 9px 200px green;
     opacity: 0.4;
     border-radius: 20px;
     padding-top: 40px;
 }
-/* landing img next */
+
+/* Container for content */
 .container {
     display: flex;
     align-items: center;
@@ -154,10 +139,6 @@ body {
     gap: 30px;
     padding: 40px;
     width: 1000px;
-    
-    
-   
-    
 }
 
 .image img {
@@ -167,19 +148,20 @@ body {
     border-radius: 0px 15px 0px 15px;
     box-shadow: 0px 3px 10px black;
     transition: transform 0.4s ease;
-    &:hover{
-        transform: scale(1.2);
-    }
+}
 
+.image img:hover {
+    transform: scale(1.2);
 }
 
 .content {
     margin-left: 40px;
     width: 500px;
     transition: transform 0.4s ease;
-    &:hover{
-        transform: scale(1.2);
 }
+
+.content:hover {
+    transform: scale(1.2);
 }
 
 .content h1 {
@@ -188,117 +170,48 @@ body {
     color: #333;
 }
 
-
-
 .content p {
     font-size: 18px;
     line-height: 1.6;
     color: black;
     margin-bottom: 15px;
 }
-/* function  */
-#function{
+
+/* Functional Training Section */
+#function {
     height: 400px;
     width: 100%;
     display: flex;
- justify-content: space-around;
-    
-   
-    
+    justify-content: space-around;
 }
-#f1 {
 
+#f1, #f2, #f3, #f4 {
     height: 400px;
     width: 24%;
-    background-image: url(./image/ft.jpg);
-    background-size: 100% 400px;background-repeat: no-repeat;
     filter: drop-shadow(8px 8px 10px gray);
-    text-shadow:1px 1px black;   
-  
+    text-shadow: 1px 1px black;
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-#f1 button{
- 
+#f1 { background-image: url(./image/ft.jpg); }
+#f2 { background-image: url(./image/Fb.jpg); }
+#f3 { background-image: url(./image/bt.jpg); }
+#f4 { background-image: url(./image/wl.jpg); }
+
+#f1 button, #f2 button, #f3 button, #f4 button {
     border-radius: 10px;
-    padding: 8px 20px 8px 20px ;
-    margin: 280px 0px 0px 42% ;
-    &:hover{
-        background-color: green;
-        color: white;
-    }
-
+    padding: 8px 20px;
+    margin: 280px 0px 0px 42%;
 }
 
-
-#f2 {
-    height: 400px;
-    width: 24%;
-   background-image: url(./image/Fb.jpg);
-   background-size: 100% 400px;background-repeat: no-repeat;
-   filter: drop-shadow(8px 8px 10px gray);
-   text-shadow:1px 1px black;
-       
+#f1 button:hover, #f2 button:hover, #f3 button:hover, #f4 button:hover {
+    background-color: green;
+    color: white;
 }
 
-#f2 button{
-   
-    border-radius: 10px;
-    padding: 8px 20px 8px 20px ;
-    margin: 275px 0px 0px 39% ;
-    &:hover{
-        background-color: green;
-        color: white;
-    }
-
-}
-
-#f3 {
-    height: 400px;
-    width: 24%;
-    background-image: url(./image/bt.jpg);
-    background-size: 100% 400px;background-repeat: no-repeat;
-    filter: drop-shadow(8px 8px 10px gray);
-    text-shadow:1px 1px black;
-       
-}
-
-#f3 button{
-   
-    border-radius: 10px;
-    padding: 8px 20px 8px 20px ;
-    margin: 276px 0px 0px 39% ;
-    &:hover{
-        background-color: green;
-        color: white;
-    }
-
-}
-
-#f4 {
-    height: 400px;
-    width: 24%;
-    background-image: url(./image/wl.jpg);
-    background-size: 100% 400px;background-repeat: no-repeat;
-    filter: drop-shadow(8px 8px 10px gray);
-    text-shadow:1px 1px black;
-}
-
-#f4 button{
-  
-    border-radius: 10px;
-    padding: 8px 20px 8px 20px ;
-    margin: 265px 0px 0px 36% ;
-    &:hover{
-        background-color: green;
-        color: white;
-    }
-
-}
-
-
-
-
-/* our gym equiment */
+/* Gallery Section */
 h1 {
     color: green;
     margin: 20px;
@@ -323,9 +236,9 @@ h1 {
 
 .gallery img:hover {
     transform: scale(1.05);
-   
 }
 
+/* BMI Calculator */
 #bmi-calculator {
     background-color: #f5f5f5;
     padding: 40px;
@@ -383,11 +296,8 @@ h1 {
     color: #333;
 }
 
-
-
-
-/* opportunities */
-#opportunities{
+/* Opportunities Section */
+#opportunities {
     height: 600px;
     width: 100%;
     margin-left: 30px;
@@ -395,15 +305,17 @@ h1 {
     background-image: url(./image/opportunities\ 3.jpeg);
     background-size: 100% 600px;
     background-repeat: no-repeat;
-  
 }
+
 #box {
     margin: 5px 500px 5px 500px;
 }
+
 #box h2 {
     color: black;
     margin-bottom: 20px;
-  }
+}
+
 #box input, #box textarea {
     width: 100%;
     padding: 10px;
@@ -411,13 +323,14 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
-    transform: translate y(scale);
-  }
+}
+
 #box textarea {
-    height: 150px; 
-  }
+    height: 150px;
+}
+
 #box button {
-    background-color:green;
+    background-color: green;
     color: white;
     margin-left: 50px;
     padding: 10px;
@@ -427,15 +340,15 @@ h1 {
     cursor: pointer;
     width: 80%;
     transition: background-color 0.3s ease;
-    &:hover {
-        background-color: rgb(61, 161, 61);
-        color: black;
-      }
-  }
+}
 
+#box button:hover {
+    background-color: rgb(61, 161, 61);
+    color: black;
+}
 
-  /* footer */
-  footer {
+/* Footer */
+footer {
     width: 100%;
     background-color: black;
     color: white;
@@ -450,20 +363,18 @@ h1 {
 
 .footer-content p {
     margin: 5px 0;
-    
 }
 
 .footer-links,
 .footer-contact,
 .footer-social {
     margin-top: 20px;
-    
 }
 
 .footer-links a,
 .footer-social a {
     font-size: 20px;
-    color:green;
+    color: green;
     margin: 0 10px;
     text-decoration: none;
 }
@@ -477,11 +388,13 @@ h1 {
     margin: 5px 0;
     font-size: 14px;
 }
-.footer-social a img{
+
+.footer-social a img {
     height: 40px;
     width: 40px;
     transition: transform 0.4s ease;
-    &:hover{
-        transform: scale(1.2);
-    }
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
 }
